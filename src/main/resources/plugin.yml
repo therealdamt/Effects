@@ -3,3 +3,7 @@ main: me.damt.effects.Main
 name: Effects
 author: damt
 description: Effects Plugin for HCF servers!
+commands:
+  speed:
+  fire:
+  invis:
