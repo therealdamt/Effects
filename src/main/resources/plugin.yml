@@ -5,5 +5,8 @@ author: damt
 description: Effects Plugin for HCF servers!
 commands:
   speed:
+    aliases: [sp]
   fire:
+    aliases: [fire, fireresistance]
   invis:
+    aliases: [invi, invisibility]
