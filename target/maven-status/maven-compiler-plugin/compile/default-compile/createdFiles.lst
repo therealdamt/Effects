@@ -1,0 +1,5 @@
+me\damt\effects\Main.class
+me\damt\effects\commands\InvisCommand.class
+me\damt\effects\commands\SpeedCommand.class
+me\damt\effects\commands\FireCommand.class
+me\damt\effects\Util.class

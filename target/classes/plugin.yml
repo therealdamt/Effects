@@ -1,0 +1,12 @@
+version: 1.0
+main: me.damt.effects.Main
+name: Effects
+author: damt
+description: Effects Plugin for HCF servers!
+commands:
+  speed:
+    aliases: [sp]
+  fire:
+    aliases: [fire, fireresistance]
+  invis:
+    aliases: [invi, invisibility]
