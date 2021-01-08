@@ -1,0 +1,10 @@
+#epic effects plugin for hcf lmfao
+Speed:
+  Enabled: true
+  Message: "&fYou have enabled &b&lSpeed!"
+Invis:
+  Enabled: true
+  Message: "&fYou have enabled &0&lInvisiblity!"
+Fire:
+  Enabled: true
+  Message: "&fYou have enabled &6&lFire Resistance!"
