@@ -1,6 +1,6 @@
 package me.damt.effects.commands;
 
-import me.damt.effects.Main;
+import me.damt.effects.Effect;
 import me.damt.effects.Util;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -12,21 +12,22 @@ import org.bukkit.potion.PotionEffectType;
 public class SpeedCommand implements CommandExecutor {
 
 
-    private Main main;
-    public SpeedCommand(Main main) {
-        this.main = main;
-    }
+    private Effect main = Effect.getInstance();
 
     public boolean onCommand(CommandSender commandSender, Command command, String s, String[] strings) {
         Player player = (Player) commandSender;
 
-        if (commandSender instanceof Player && player.hasPermission("effects.speed")) {
-            if (main.getConfig().getBoolean("Speed.Enabled") == true) {
-                player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 1));
-                player.sendMessage(Util.chat(main.getConfig().getString("Speed.Message")));
+        if (commandSender instanceof Player) {
+            if (player.hasPermission("effects.speed")) {
+                if (main.getConfig().getBoolean("Speed.Enabled") == true) {
+                    player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, Integer.MAX_VALUE, 1));
+                    player.sendMessage(Util.chat(main.getConfig().getString("Speed.Message")));
+                }
+            } else {
+                player.sendMessage(Util.chat("&cNo Permission"));
             }
         } else {
-            player.sendMessage(Util.chat("&cNo Permission"));
+            commandSender.sendMessage(Util.chat("&cThis is a player only command!"));
         }
 
         return false;
